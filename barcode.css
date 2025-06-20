@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background: rgb(221, 119, 17);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 26px;
+}
+
+.hero {
+  text-align: center;
+  color: rgb(221, 119, 17);
+  background: #eee;
+  padding: 20px 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero p {
+  font-size: 18px;
+  color: #333;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+.steps {
+  padding: 20px;
+}
+.steps h3{
+  margin: 20px;
+  font-size: 20px;
+}
+.steps-card {
+  display: flex;
+  justify-content: space-around;
+  min-height: 150px;
+  gap: 10px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 300px;
+  margin-top: 30px;
+}
+
+.step-number {
+  background-color: rgb(221, 119, 17);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;                
+  justify-content: center;    
+  align-items: center;       
+  font-size: 16px;
+}
+
+.step-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.main-content {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+input, select, button {
+  width: 100%;
+  min-height: 30px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  display: block;
+   box-sizing: border-box; 
+  margin: 10px 0;
+}
+
+#searchInput {
+  width: 100%;
+  min-height: 30px;
+  background: rgb(231, 222, 214);
+  border: none;
+}
+
+#generateBtn, #genBtn {
+  background: rgb(221, 119, 17);
+  padding: 14px 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+#generateBtn .fa-barcode {
+  margin-right: 8px;
+  font-size: 16px;
+}
+#generateBtn:hover {
+  background: rgb(240, 135, 30); 
+}
+#genBtn:hover {
+  background: rgb(240, 135, 30); 
+}
+#newProductName {
+  width: 100%;
+  min-height: 30px;
+  border: 2px solid rgb(179, 177, 177);
+}
+
+
+#editProductSelect {
+  width: 100%;
+  min-height: 30px;
+  border: 2px solid rgb(179, 177, 177);
+  margin-bottom: 10px;
+}
+
+#editProductName {
+  width: 100%;
+  min-height: 30px;
+  border: 2px solid rgb(179, 177, 177);
+  margin-bottom: 10px;
+}
+
+.edit-product-btn {
+  background: rgb(221, 119, 17);
+  padding: 14px 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.edit-product-btn:hover {
+  background: rgb(240, 135, 30);
+}
+.update-btn, .delete-btn {
+  padding: 12px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  width: 60%;
+}
+ .update-btn{
+    background: rgb(1, 105, 1);
+ }
+.update-btn:hover {
+  background: rgb(1, 80, 1);
+}
+.delete-btn {
+  background: #f92d2d;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc; 
+  margin: 10px 0;
+}
+.right-column .card {
+  margin-top: 14px; 
+  margin-bottom: 0; 
+  align-self: center;
+}
+
+
+.right-column .card {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 .fa-barcode {
+  font-size: 1.2em; 
+  color: rgb(221, 119, 17);
+}
+.barcode-placeholder {
+  margin-top: 20px;
+  border: 2px dashed #939090;
+  border-radius: 5px;
+  background: #d6d4d4;
+  padding: 30px 20px;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #717070;
+}
+.barcode-placeholder .fa-barcode {
+  margin-bottom: 20px;
+  color: #939090;
+}
+
+#barcodeArea {
+  color: #717070;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.barcode-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  padding: 10px 15px;
+  border: 2px solid #939090;
+  color: rgb(53, 53, 241);
+  font-size: 16px;
+  font-weight: 600;
+  width: 60%;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn i {
+  font-size: 14px; 
+}
+
+.btn:hover {
+  background: #d0cccc;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal .close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@media (max-width: 900px) {
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    min-width: 100%;
+  }
+
+  .btn {
+    width: 80%;
+  }
+
+  .step {
+    max-width: 90%;
+  }
+}
+
+/* === 768px and below === */
+@media (max-width: 768px) {
+ 
+  header {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .step-text {
+    font-size: 13px;
+  }
+
+  input, select, button {
+    font-size: 15px;
+  }
+
+  .barcode-placeholder {
+    padding: 20px 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+.steps-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 22px;
+  }
+.steps-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-number {
+    margin-bottom: 10px;
+  }
+
+  .step-text {
+    font-size: 12px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .barcode-placeholder {
+  min-height: 200px;
+  }
+.barcode
+  .barcode-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content {
+    margin: 20% auto;
+    width: 95%;
+  }
+}
+
+/* === 320px and below === */
+@media (max-width: 320px) {
+  header {
+    font-size: 20px;
+    padding: 8px 0;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .step-number {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .modal-content {
+    margin: 25% auto;
+    width: 98%;
+  }
+}

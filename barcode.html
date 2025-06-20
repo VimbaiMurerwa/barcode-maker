@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barcode Maker</title>
+  <link rel="stylesheet" href="barcode.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-barcode"></i> Barcode Maker</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Professional Barcode Generator</h2>
+    <p>Generate standard barcodes for your products</p>
+  </section>
+
+ <section class="steps">
+     <h3><i class="fas fa-info-circle"></i> How to Use This App</h3>
+  <div class="card steps-card">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-text">
+        <strong><span style="color: #333;">Select Product</strong><br>
+        <span style="color: gray;">Choose from existing products or add a new one</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-text">
+        <strong><span style="color: #333;">Generate Barcode</strong><br>
+        <span style="color: gray;">Click generate to create your barcode</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-text">
+        <strong><span style="color: #333;">Download <strong><br>
+         <span style="color: gray;">Save as PNG for digital use</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-text">
+        <strong><span style="color: #333;">Print</strong><br>
+        <span style="color: gray;">  High-quality output for labels and packaging</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <main class="main-content">
+      <div class="left-column">
+      <div class="card">
+        <h3><span class="icon">🛒</span> Select Product</h3><hr/>
+        <input type="text" id="searchInput" placeholder="Search products...">
+         <select id="productSelect">
+        </select>
+        <button id="generateBtn">
+          <i class="fas fa-barcode"></i>
+          Generate Barcode</button>
+      </div>
+   
+
+      <div class="card">
+        <h3><span class="icon">➕</span> Add New Product</h3><hr/>
+        <label for="newProductName">Product Name</label>
+        <input type="text" id="newProductName" placeholder="Enter product name" />
+        <button id="genBtn" onclick="addProduct()">Add Product</button>
+      </div>
+   
+    <div class="card">
+  <h3><i class="fas fa-edit"></i>Edit Product</h3>
+  <hr/>
+  <label for="editProductSelect">Select Product</label>
+  <select id="editProductSelect"></select>
+  <label for="editProductName">New Name</label>
+  <input type="text" id="editProductName" placeholder="Enter new product name" />
+  <button onclick="editProduct()" class="update-btn">Update Product</button>
+  <button onclick="deleteProduct()" class="delete-btn">Delete Product</button>
+</div>
+ </div>
+    <div class="right-column">
+     <div class="card">
+        <h3><i class="fas fa-barcode"></i>
+            Generate Barcode</h3> <hr />
+        <div id="barcodeArea" class="barcode-placeholder">
+             <i class="fas fa-barcode fa-5x"></i>
+          No barcode generated yet<br />
+          Select a product and click "Generate Barcode" to get started...
+        </div>
+       <div class="barcode-actions">
+  <button class="btn btn-download" onclick="downloadBarcode()">
+    <i class="fas fa-download"></i> Download PNG
+  </button>
+  <button class="btn" onclick="printBarcode()">
+    <i class="fas fa-print"></i> Print
+  </button>
+  <button class="btn" onclick="zoomBarcode()">
+    <i class="fas fa-search"></i> Zoom
+  </button>
+</div>
+        <div id="recentBarcodes"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Barcode Maker.</p>
+  </footer>
+
+  <div id="zoomModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeZoom()">&times;</span>
+      <div id="zoomedBarcode"></div>
+    </div>
+  </div>
+
+
+  <script src="barcode.js"></script>
+</body>
+</html>
